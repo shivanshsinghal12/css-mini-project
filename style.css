@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+}
+
+body{
+    background-image: url(photo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.sidebar_menu .logo a{
+    position: absolute;
+    top:15px;
+    left: 45%;
+    transform: translateX(-50%);
+    color: white;
+    text-decoration: none;
+    font-size: 26px;
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3),
+                 0 0 20px rgba(255, 255, 255, 0.4);
+    letter-spacing: 1px;
+}
+
+.sidebar_menu .logo a:hover{
+    color: wheat;
+    letter-spacing: 2px;
+    transform: translateX(-50%) scale(1.02);
+}
+
+.btn_two{
+    color: grey;
+    font-size: 25px;
+    line-height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 32px;
+    padding: 0 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: block;
+}
+
+.btn_one{
+    position: absolute;
+    font-size: 30px;
+    font-weight: 700;
+    left:16px;
+    line-height: 40px;
+    top:10px;
+    cursor: pointer;
+    padding: 0 8px;
+    transition: all 0.3s ease;
+}
+
+.btn_one:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+}
+
+.btn_one i{
+    transition: all 0.3s ease;
+}
+
+.btn_one i:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.sidebar_menu{
+    position:fixed;
+    left:-300px;
+    height: 100vh;
+    width:275px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 2px 0 5px rgba(255, 255, 255, 0.4),
+                inset -2px 0 10px rgba(255, 255, 255, 0.2);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(8px);
+}
+
+.sidebar_menu .logo{
+    position: absolute;
+    line-height: 60px;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.02) 0%,
+        rgba(255, 255, 255, 0.15) 50%,
+        rgba(255, 255, 255, 0.02) 100%
+    );
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px -2px rgba(255, 255, 255, 0.2);
+}
+
+.btn_two i:hover {
+    cursor: pointer;
+}
+
+
+.btn_two:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+}
+
+.sidebar_menu .menu{
+    color: white;
+    position: absolute;
+    width: 100%;
+    top: 80px;
+}
+
+.sidebar_menu ul li{
+    padding: 10px 20px;
+    margin:10px;
+    margin-top: 25px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+
+.sidebar_menu ul li a{
+    position: relative;
+    left: 10px;
+}
+
+.sidebar_menu .menu i{
+    color: wheat;
+    font-size: 18px;
+}
+
+.sidebar_menu .menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar_menu .social_media i{
+    color: wheat;
+    opacity:0.5;
+    padding: 5px;
+}
+
+.sidebar_menu .social_media{
+    position: absolute;
+    left:25%;
+    top:90%
+}
+
+#check{
+    display: none;
+}
+
+.sidebar_menu ul li:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow:  0 0  6px rgba(255, 255, 255, 0.5);
+}
+
+.sidebar_menu ul li a{
+    position: relative;
+    left: 10px;
+}
+
+.sidebar_menu .menu i{
+    color: wheat;
+    font-size: 18px;
+}
+
+.sidebar_menu .menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar_menu .social_media i{
+    color: wheat;
+    opacity:0.5;
+    padding: 5px;
+}
+
+.sidebar_menu .social_media{
+    position: absolute;
+    left:25%;
+    top:90%
+}
+
+#check{
+    display: none;
+}
+
+.sidebar_menu .social_media i{
+    transition: all 0.3s ease;
+}
+
+.sidebar_menu .social_media i:hover{
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+#check:checked ~ .sidebar_menu{
+    left: 0;
+    box-shadow: 2px 0 15px rgba(255, 255, 255, 0.4),
+                inset -2px 0 10px rgba(255, 255, 255, 0.2);
+}
+
+#check:checked ~ .btn_one{
+    opacity: 0;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 600px) {
+    .sidebar_menu {
+        width: 100vw; /* Make sidebar full screen width */
+        left: -100vw; /* Hide it completely off-screen */
+    }
+
+    .sidebar_menu .logo a {
+        font-size: 24px; /* Slightly reduce logo font size */
+        left: 50%; /* Center the logo properly */
+    }
+
+    .sidebar_menu .menu {
+        top: 100px; /* Add more space for menu items */
+    }
+
+    .sidebar_menu .social_media {
+        left: 50%; /* Center social media icons */
+        transform: translateX(-50%);
+        top: 85%;
+    }
+}
